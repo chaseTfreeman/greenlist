@@ -10,8 +10,8 @@
   </ul>
 </div>
 <% end %>
-<%= f.label :Category %>
-<%= f.number_field :category_id %>
+<%= f.collection_select :category_id, Category.all, :id, :category %>
+
 <div class="field">
   <%= f.label :title %>
   <%= f.text_field :title %>
